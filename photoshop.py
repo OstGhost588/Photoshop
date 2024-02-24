@@ -1,0 +1,32 @@
+from PyQt5.QtWidgets import*
+
+app = QApplication([])
+
+window = QWidget()
+window_small_left = QListWidget()
+cartoon = QLabel()
+papka = QPushButton("Папка")
+left = QPushButton("Вліво")
+right = QPushButton("Вправо")
+mirror = QPushButton("Дзеркало")
+rizkist = QPushButton("Різькість")
+ChB = QPushButton("Ч/Б")
+
+main_lain = QHBoxLayout()
+h1 = QVBoxLayout()
+h2 = QVBoxLayout()
+v3 = QHBoxLayout()
+main_lain.addLayout(h1)
+main_lain.addLayout(h2)
+h1.addWidget(papka)
+h1.addWidget(window_small_left)
+h2.addWidget(cartoon)
+h2.addLayout(v3)
+window.setLayout(main_lain)
+v3.addWidget(left)
+v3.addWidget(right)
+v3.addWidget(mirror)
+v3.addWidget(ChB)
+
+window.show()
+app.exec()
